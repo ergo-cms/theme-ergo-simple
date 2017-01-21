@@ -3,8 +3,8 @@ This is a minimal skeleton config for ergo cms. See online for more options
 */
 
 module.exports = {
-	name: "Ergo Default Theme",
-	//url: "https://github.com/ergo-cms/theme-default",
+	name: "Ergo Simple Theme",
+	url: "https://github.com/ergo-cms/theme-ergo-simple",
 	asset_paths: ['styles.css','favicon.ico','images','flaticon'],
 	default_fields: {
 		dynamic_list: function() { // See*** below for description

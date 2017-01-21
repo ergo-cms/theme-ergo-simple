@@ -28,7 +28,7 @@ There are two partial files that are included, that may be overridden easily:
 ## The easy installation
 
 ```
-ergo theme install ergo_simple
+ergo theme install ergo-simple
 ```
 
 This will download and install the theme into the _themes folder and set it is as the current one. You can then rebuild your site with (a 'clean' is always recommended when switching themes):
@@ -44,7 +44,7 @@ If you prefer to do things manually to install a theme, then follow these instru
 Download and extract this theme into your `_themes` folder as 'ergo_simple' and then edit your `config.ergo.js` file and change the setting theme to:
 
 ```
-	theme = 'ergo_simple',
+	theme = 'ergo-simple',
 ```
 
 Note that you may choose whatever folder name you like.

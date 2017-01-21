@@ -1,0 +1,20 @@
+{{>header.inc }}
+{{!
+
+            	See theme.ergo.js for a description on how this works
+
+
+}}
+<h1>{{title}}</h1>
+{{^list_hide_content }}
+	{{{content}}}
+	<hr/>
+{{/list_hide_content}}
+{{#dynamic_list}}
+<dl>
+    <dt><a href="/{{uri}}">{{title}}</a></dt>
+    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
+    <span class="meta">Posted by <a href="{{author_url}}">{{author}}</a> on {{date.formatted}}</span></dd>
+</dl>
+{{/dynamic_list}}
+{{>footer.inc}}

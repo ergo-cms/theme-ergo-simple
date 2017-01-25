@@ -5,12 +5,11 @@
 	<hr/>
 {{/list_hide_content}}
 {{#dynamic_list}}
+<h2 id="{{key}}">{{key}}</h2>{{#value}}
 <dl>
     <dt><a href="/{{uri}}">{{title}}</a></dt>
     <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
-    <span class="meta">Posted by <a href="{{author_url}}">{{author}}</a> on {{date.formatted}}</span></dd>
-</dl>
-{{else}}
-<i>Nothing available.</i>
+    <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span></dd>
+</dl>{{/value}}
 {{/dynamic_list}}
 {{>footer.inc}}

@@ -1,4 +1,22 @@
 {{> header.inc.html {extracss:'home'} }}
 <h1><a href="/{{uri}}">{{^longtitle}}{{title}}{{/longtitle}}{{longtitle}}</a></h1>
 {{{content}}}
+{{^hide_featured_posts}}
+<h2>Featured Posts</h2>
+{{#featured}}
+<dl>
+    <dt><a href="/{{uri}}">{{title}}</a></dt>
+    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
+    <span class="meta">Posted by <a href="{{author_url}}">{{author}}</a> on {{date.formatted}}</span></dd>
+</dl>
+{{/featured}}{{/hide_featured_posts}}
+{{^hide_popular_posts}}
+<h2>Popular</h2>
+{{#popular}}
+<dl>
+    <dt><a href="/{{uri}}">{{title}}</a></dt>
+    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
+    <span class="meta">Posted by <a href="{{author_url}}">{{author}}</a> on {{date.formatted}}</span></dd>
+</dl>
+{{/popular}}{{/hide_popular_posts}}
 {{> footer.inc.html}}

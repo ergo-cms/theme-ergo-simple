@@ -13,8 +13,18 @@
 		{{#social.github}}<a href="https://github.com/{{{social.github}}}"><i class="flaticon-github"></i></a>{{/social.github}}
 	</div>
 </div>
+{{#has_nextprev}}<!--nextprev plugin-->
+<div style="text-align:right;margin-bottom:2em">
+{{#prev}}
+	<a href="/{{uri}}" class="button">&lt;&lt; Previous</a>
+{{/prev}}
+{{#next}}
+	<a href="/{{uri}}" class="button">Next &gt;&gt;</a>
+{{/next}}
+</div>
+{{/has_nextprev}}
 {{#social.disqus}}
-<div id="disqus_thread"><a href="#" onclick="return disqus();" id="show_comments">Show Comments</a> </div>
+<div id="disqus_thread"><a href="#" onclick="return disqus();" id="show_comments" class="button">Show Comments</a> </div>
 <script type="text/javascript">
 	var disqus_loaded = false;
 	var disqus_shortname = '{{{social.disqus}}}';

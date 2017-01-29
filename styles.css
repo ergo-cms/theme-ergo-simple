@@ -97,7 +97,9 @@ body {
 .social a { padding:0 10px; font-size:1.5em; vertical-align: middle}
 .social a:first-child { padding-left:0;}
 .social a:hover { text-decoration: none; color:#a66;}
-#disqus_thread #show_comments { padding:0.5em 2em; display:block; border:1px solid rgba(0,0,0,0.2); text-align: center;}
+.button { padding:0.5em 2em; margin-bottom:2em; border:1px solid rgba(0,0,0,0.2); text-align: center; min-width:60px; border-radius: 3px}
+.button:hover { background-color:rgba(0,0,0,0.1);}
+#disqus_thread #show_comments { display:block; }
 
 
 .more {font-style:italic;}

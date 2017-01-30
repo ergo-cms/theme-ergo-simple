@@ -4,7 +4,7 @@
 	{{{content}}}
 	<hr/>
 {{/list_hide_content}}
-{{#dynamic_list}}
+{{#dynamic_list @auto_paginate }}
 <h2 id="{{key}}">{{key}}</h2>{{#value}}
 <dl>
     <dt><a href="/{{uri}}">{{title}}</a></dt>
@@ -12,4 +12,14 @@
     <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span></dd>
 </dl>{{/value}}
 {{/dynamic_list}}
+{{#paginated}}
+	<ul class="pagination">
+		{{#first}}<li><a href="/{{uri}}">&laquo;</a></li>{{else}}<li class="disabled"><a href="#">&laquo;</a></li>{{/first}}
+		{{#prev}}<li><a href="/{{uri}}">&lsaquo;</a></li>{{else}}{{#paginate_nextprev}}<li class="disabled"><a href="#">&lsaquo;</a></li>{{/paginate_nextprev}}{{/prev}}
+		{{#item}}
+		<li {{#active}}class="active"{{/active}}><a href="/{{uri}}">{{page}}</a></li>{{/item}}
+		{{#next}}<li><a href="/{{uri}}">&rsaquo;</a></li>{{else}}{{#paginate_nextprev}}<li class="disabled"><a href="#">&rsaquo;</a></li>{{/paginate_nextprev}}{{/next}}
+		{{#last}}<li><a href="/{{uri}}">&raquo;</a></li>{{else}}<li class="disabled"><a href="#">&raquo;</a></li>{{/last}}
+	</ul>
+{{/paginated}}
 {{>footer.inc}}

@@ -109,6 +109,15 @@ ul.pagination a:hover{background-color:rgba(0,0,0,0.2);text-decoration: none;}
 ul.pagination li.active {background-color:rgba(200,0,0,0.1); }
 ul .disabled a { color:#888 !important;}
 
+ul.cloud { margin:1em auto;padding:0;list-style:none; display: block; text-align:center; font-size:0.7em;}
+ul.cloud li { display: inline-block;  }
+ul.cloud li a { padding:0 0.3em;}
+ul.cloud li:first-child a { padding-left:0;}
+
+ul.stats { margin:1em auto;padding:0;list-style:none; display: inline-block; font-size:0.7em;}
+ul.stats li a { padding:0 0.3em;}
+ul.stats li:first-child a { padding-left:0;}
+
 .post { margin-top:2em; } /* used on lists of articles & blogs */
 
 pre { background-color:#ddd; padding:1em 1em; border:1px solid #ccc; white-space: pre-wrap; }

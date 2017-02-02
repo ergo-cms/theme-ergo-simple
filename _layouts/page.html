@@ -1,4 +1,8 @@
 {{> header.inc.html {image:'page.jpg'} }}
 <h1><a href="/{{uri}}">{{^longtitle}}{{title}}{{/longtitle}}{{longtitle}}</a></h1>
 {{{content}}}
+<ul class="stats">
+	{{#categories}}<li>{{#. @split}}<a href="{{categories_url}}#{{.}}">{{.}}</a> {{/.}}</li>{{/categories}}
+	{{#tags}}<li>{{#. @split}}<a href="{{tags_url}}#{{.}}">{{.}}</a> {{/.}}</li>{{/tags}}
+</ul>
 {{> footer.inc.html}}

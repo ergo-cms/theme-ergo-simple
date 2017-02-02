@@ -1,11 +1,14 @@
 {{>header.inc }}
-<h1>{{title}}</h1>
+<h1 id="_top">{{title}}</h1>
 {{^list_hide_content }}
 	{{{content}}}
 	<hr/>
 {{/list_hide_content}}
+<!--cloud--><ul class="cloud">{{#dynamic_list}}
+<li><a href="#{{key}}" data-size="{{value.length}}">{{key}} ({{value.length}})</a></li>
+{{/dynamic_list}}</ul>
 {{#dynamic_list @auto_paginate }}
-<h2 id="{{key}}">{{key}}</h2>{{#value}}
+<h2 id="{{key}}"><a href="#_top">{{key}}</a></h2>{{#value}}
 <dl>
     <dt><a href="/{{uri}}">{{title}}</a></dt>
     <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>

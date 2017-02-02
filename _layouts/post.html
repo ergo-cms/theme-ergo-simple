@@ -3,6 +3,10 @@
   <h1><a href="/{{uri}}">{{^longtitle}}{{title}}{{/longtitle}}{{longtitle}}</a></h1>
 	{{{content}}}
 	<div class="clear"></div>
+	<ul class="stats">
+		{{#categories}}<li>{{#. @split}}<a href="{{categories_url}}#{{.}}">{{.}}</a> {{/.}}</li>{{/categories}}
+		{{#tags}}<li>{{#. @split}}<a href="{{tags_url}}#{{.}}">{{.}}</a> {{/.}}</li>{{/tags}}
+	</ul>
 	<div class="social">Follow me on:&nbsp;&nbsp;&nbsp;
 		<a id="rss" href="{{feed_url}}"><i class="flaticon-rss"></i></a> 
 		{{#social.twitter}}<a href="https://twitter.com/{{{social.twitter}}}"><i class="flaticon-twitter"></i></a>{{/social.twitter}}

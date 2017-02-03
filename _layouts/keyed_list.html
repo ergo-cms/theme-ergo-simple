@@ -9,11 +9,13 @@
 {{/dynamic_list}}</ul>
 {{#dynamic_list @auto_paginate }}
 <h2 id="{{key}}"><a href="#_top">{{key}}</a></h2>{{#value}}
-<dl>
-    <dt><a href="/{{uri}}">{{title}}</a></dt>
-    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
-    <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span></dd>
-</dl>{{/value}}
+	<div class="post clear bordered">
+    	{{#image}}<img src="/images/{{image #safe_thumb{w:120} }}" class="thumb">{{/image}}
+   	 <a href="/{{uri}}">
+    	<h3>{{title}}</h3>
+    	<h4>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}</h4></a>
+    	<p class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</p>
+	</div>{{/value}}
 {{/dynamic_list}}
 {{#paginated}}
 	<ul class="pagination">

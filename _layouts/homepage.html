@@ -4,20 +4,23 @@
 {{^hide_featured_posts}}
 <h2>Featured Posts</h2>
 {{#featured}}
-<dl>
-    <dt><a href="/{{uri}}">{{title}}</a></dt>
-    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
-    <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span>
-</dd>
-</dl>
-{{/featured}}{{/hide_featured_posts}}
+	<div class="post clear bordered featured">
+    	{{#image}}<img src="/images/{{image #safe_thumb{w:300} }}" class="thumb">{{/image}}
+   	 <a href="/{{uri}}">
+    	<h3>{{title}}</h3>
+    	<h4>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}</h4></a>
+    	<p class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</p>
+	</div>
+{{/featured}}<div class="clear"></div>{{/hide_featured_posts}}
 {{^hide_popular_posts}}
 <h2>Popular</h2>
 {{#popular}}
-<dl>
-    <dt><a href="/{{uri}}">{{title}}</a></dt>
-    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
-    <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span></dd>
-</dl>
+	<div class="post clear bordered">
+    	{{#image}}<img src="/images/{{image #safe_thumb{w:120} }}" class="thumb">{{/image}}
+   	 <a href="/{{uri}}">
+    	<h3>{{title}}</h3>
+    	<h4>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}</h4></a>
+    	<p class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</p>
+	</div>
 {{/popular}}{{/hide_popular_posts}}
 {{> footer.inc.html}}

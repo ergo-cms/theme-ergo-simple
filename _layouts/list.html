@@ -1,19 +1,21 @@
 {{>header.inc }}
-<h1>{{title}}</h1>
+<h1 id="_top">{{title}}</h1>
 {{^list_hide_content }}
 	{{{content}}}
 	<hr/>
 {{/list_hide_content}}
 {{#dynamic_list @auto_paginate }}
-<dl>
-    <dt><a href="/{{uri}}">{{title}}</a></dt>
-    <dd>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}<br/>
-    <span class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</span></dd>
-</dl>
+	<div class="post clear bordered">
+    	{{#image}}<img src="/images/{{image #safe_thumb{w:120} }}" class="thumb">{{/image}}
+   	 <a href="/{{uri}}">
+    	<h3>{{title}}</h3>
+    	<h4>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}</h4></a>
+    	<p class="meta">Posted by <a href="{{author_url}}#{{author}}">{{author}}</a> on {{date.formatted}}</p>
+	</div>
 {{else}}
 <i>Nothing available.</i>
 {{/dynamic_list}}
-{{#paginated}}
+</dl>{{#paginated}}
 	<ul class="pagination">
 		{{#first}}<li><a href="/{{uri}}">&laquo;</a></li>{{else}}<li class="disabled"><a href="#">&laquo;</a></li>{{/first}}
 		{{#prev}}<li><a href="/{{uri}}">&lsaquo;</a></li>{{else}}{{#paginate_nextprev}}<li class="disabled"><a href="#">&lsaquo;</a></li>{{/paginate_nextprev}}{{/prev}}

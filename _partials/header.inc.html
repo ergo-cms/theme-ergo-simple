@@ -6,6 +6,7 @@
 {{#metadesc}}<meta name="description" content="{{metadesc}}" />{{/metadesc}}
 {{#metakeys}}<meta name="keywords" content="{{metakeys}}" />{{/metakeys}}
 <link href="/styles.css" rel="stylesheet" type="text/css" />
+{{#extracss}}<link href="{{.}}" rel="stylesheet" type="text/css" />{{/extracss}}
 <link rel="alternate" type="application/rss+xml" title="News &amp; Articles Feed" href="/rss.xml" />
 <meta name="viewport" content="width=device-width,maximum-scale=1.0" />
 <meta property="author" content="{{author}}" />
@@ -18,14 +19,14 @@
 </head>
 <body>
 	<!-- The 'extracss' has been added here -->
-<div id="banner" class="s {{extracss}}"{{#image}} style="background-image:url(/images/{{{image}}})"{{/image}}>
+<div id="banner" class="s {{extracss}}"{{#image}} style="background-image:url(/images/{{image}})"{{/image}}>
 	<div id="nav">
 	<!-- change your menu at _partials/menu.tex -->
 	{{>menu}}
 	</div>
-	<h1 id="title"><a href="#content"><b>∴</b> {{^longtitle}}{{title}}{{/longtitle}}{{longtitle}}</a></h1>
+	<h1 id="title"><a href="#content"><b>∴</b> {{longtitle || title}}</a></h1>
 </div>
-<div class="s">
+<div class="s {{extracss}}">
 	<div class="c">
 		<div id="content">
 

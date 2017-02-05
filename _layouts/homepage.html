@@ -5,7 +5,7 @@
 <h2>Featured Posts</h2>
 {{#featured}}
 	<div class="post clear bordered featured">
-    	{{#image}}<img src="/images/{{image #safe_thumb{w:300} }}" class="thumb">{{/image}}
+    	{{#image}}<img src="/images/{{image #safe_thumb{w:300} }}" class="thumb" srcset="{{image #safe_srcset{w:'300,512,720'} }}" sizes="(max-width:768px) 90vw, 20vw">{{/image}}
    	 <a href="/{{uri}}">
     	<h3>{{title}}</h3>
     	<h4>{{^subtitle}}{{metadesc}}{{/subtitle}}{{subtitle}}</h4></a>

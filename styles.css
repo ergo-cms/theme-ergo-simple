@@ -61,12 +61,12 @@ h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited{color:#333;}
 
 #banner { color:#ccc; background-size:cover; background-color:none; background-position:center 70%; background-image:url(images/page.jpg); box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.2); border-bottom: 1px solid #aaa; overflow:hidden; min-height:300px; }
 #banner #nav {text-align:left;position:absolute;}
-#banner #nav ul {margin:1.0em 0 0 0;padding:0;list-style:none;display:inline-block;}
-#banner #nav li {margin:0;padding:0;float:left;display:inline;}
+#banner #nav ul {margin:0;padding:0;list-style:none;display:inline-block;}
+#banner #nav li {margin:0;padding:0;float:left;display:inline;line-height: 3.2em}
 #banner #nav a{ color:#ccc; font-size:1em;font-weight:normal;padding:1.0em 1em;border-left:1px solid rgba(255,255,255,0.2);margin-left:-1px}
 #banner #nav a:hover{background-color:rgba(0,0,0,0.2);}
 #banner #title { position:absolute;bottom:0.2em;right:15%;display:inline;max-width:50%;text-align:right}
-#banner #title a { color:#ccc; font-weight:normal;line-height:1em; padding:0.2em 0; text-shadow: 0.005em 0.005em .2em rgba(0,0,0,0.5);}
+#banner #title a { color:#ccc; font-weight:normal;line-height:1em; padding:0.2em 0; text-shadow: 0.005em 0.005em .2em rgba(0,0,0,0.5); wra}
 #banner #title a:hover { color:#eee;text-decoration:none; text-shadow: 0.005em 0.005em .2em rgba(255,255,255,0.5);}
 
 
@@ -85,7 +85,7 @@ body {
 
 #content dt { margin-top: 0.5em;}
 #content dd { font-style: italic; margin-bottom:0.4em;font-size:0.9em;}
-#content .meta { font-size:0.8em;margin-left:1em;}
+#content .meta { font-size:0.8em; margin-top:0;}
 #content hr { border:none; height:1px; background-color:rgba(0,0,0,0.2);width:80%}
 
 #footer { color:#222;margin-top: auto; font-family: "Lucida Console", Monaco, monospace;
@@ -170,4 +170,25 @@ Creation date: 19/01/2017 03:59
 .flaticon-pinterest:before { content: "\f105"; }
 .flaticon-rss:before { content: "\f106"; }
 .flaticon-twitter:before { content: "\f107"; }
+
+
+/* responsive layout changes*/
+/* tablets */
+@media screen and (max-width:768px), screen and (max-device-width:768px) {
+	.c {width:90%;}
+	.c25 {width:49.5%;}
+	.c33,.c50,.c66 {float:none;width:100%;margin-bottom:1em;}
+	#banner #title { max-width: 100%; }
+	#content .post.featured img.thumb {
+	    max-width: auto;
+	    min-width: 100%;
+	    float: none;
+	}
+	#content .post.featured h3 {
+		margin-top:0.5em;
+	}
+}
+
+
+
 
